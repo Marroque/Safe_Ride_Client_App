@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="jfelt.saferides">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Home">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".RequestRide"
+            android:label="@string/title_activity_request_ride"
+            android:parentActivityName=".Home">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Home" />
+        </activity>
+        <activity
+            android:name=".RegisterDriver"
+            android:label="@string/title_activity_register_driver"
+            android:parentActivityName=".Home">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Home" />
+        </activity>
+        <activity
+            android:name=".RequestRideInfo"
+            android:label="@string/title_activity_request_ride"
+            android:parentActivityName=".RequestRide">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".RequestRide" />
+        </activity>
+        <activity
+            android:name=".RequestRideConfirm"
+            android:label="@string/title_activity_request_ride"
+            android:parentActivityName=".RequestRideInfo">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".RequestRideInfo" />
+            </activity>
+        <activity
+            android:name=".RequestRideSubmit"
+            android:label="@string/title_activity_request_ride"
+            android:parentActivityName=".RequestRideConfirm">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".RequestRideConfirm" />
+            </activity>
+    </application>
+
+</manifest>
