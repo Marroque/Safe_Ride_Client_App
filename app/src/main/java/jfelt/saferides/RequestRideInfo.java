@@ -50,7 +50,7 @@ public class RequestRideInfo extends AppCompatActivity {
             public void onClick(View arg0) {
 
                 Location location = appLocationService
-                        .getLocation(LocationManager.NETWORK_PROVIDER);
+                        .getLocation(LocationManager.GPS_PROVIDER);
 
                 if (location != null) {
                     double latitude = location.getLatitude();
