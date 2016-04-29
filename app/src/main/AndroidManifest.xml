@@ -2,13 +2,20 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="jfelt.saferides">
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Home">
+
+        <activity
+            android:name=".Home"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,7 +25,8 @@
         <activity
             android:name=".RequestRide"
             android:label="@string/title_activity_request_ride"
-            android:parentActivityName=".Home">
+            android:parentActivityName=".Home"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Home" />
@@ -26,7 +34,8 @@
         <activity
             android:name=".RegisterDriver"
             android:label="@string/title_activity_register_driver"
-            android:parentActivityName=".Home">
+            android:parentActivityName=".Home"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Home" />
@@ -34,7 +43,8 @@
         <activity
             android:name=".RequestRideInfo"
             android:label="@string/title_activity_request_ride"
-            android:parentActivityName=".RequestRide">
+            android:parentActivityName=".RequestRide"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".RequestRide" />
@@ -42,7 +52,8 @@
         <activity
             android:name=".RequestRideConfirm"
             android:label="@string/title_activity_request_ride"
-            android:parentActivityName=".RequestRideInfo">
+            android:parentActivityName=".RequestRideInfo"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".RequestRideInfo" />
@@ -50,7 +61,8 @@
         <activity
             android:name=".RequestRideSubmit"
             android:label="@string/title_activity_request_ride"
-            android:parentActivityName=".RequestRideConfirm">
+            android:parentActivityName=".RequestRideConfirm"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".RequestRideConfirm" />
